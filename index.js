@@ -5,6 +5,7 @@ const authRoute = require("./routes/authRoute.js");
 const rateLimit = require("express-rate-limit");
 const morgan = require("morgan");
 const { generateSecretKey } = require("./helpers/authHelper.js");
+const cron = require("./cron.js");
 
 //configure env
 dotenv.config();
@@ -63,6 +64,8 @@ app.use((err, req, res, next) => {
     message: "Internal Server Error",
   });
 });
+
+app.use("/cron", cron);
 
 //rest api
 app.get("/", (req, res) => {

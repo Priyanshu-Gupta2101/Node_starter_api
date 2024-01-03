@@ -4,7 +4,8 @@ const User = require("./models/user");
 
 connectDB();
 
-cron.schedule("0 0 * * *", async () => {
+export const cron = async () => {
+  console.log("Cron job started...");
   try {
     const twoHoursAgo = new Date(Date.now() - 3 * 60 * 60 * 1000);
     const usersToDelete = await User.find({
@@ -18,6 +19,4 @@ cron.schedule("0 0 * * *", async () => {
   } catch (error) {
     console.error("Error in cron job:", error);
   }
-});
-
-console.log("Cron job started...");
+};
