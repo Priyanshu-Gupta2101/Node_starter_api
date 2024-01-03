@@ -4,7 +4,7 @@ const User = require("./models/user");
 
 connectDB();
 
-export const cron = async () => {
+module.exports = async () => {
   console.log("Cron job started...");
   try {
     const twoHoursAgo = new Date(Date.now() - 3 * 60 * 60 * 1000);
