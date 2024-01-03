@@ -1,6 +1,6 @@
 const cron = require("node-cron");
 const connectDB = require("./config/db");
-const User = require("./models/user");
+const User = require("./models/userModel");
 
 connectDB();
 
