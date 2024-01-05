@@ -311,6 +311,21 @@ These are the request and response documentation for each route in your Node.js 
 
 ## Functionality:
 
+0. **.env Configuration:**
+   - Copy this env file and paste your own values
+  ```
+  JWT_SECRET=""
+  PORT=
+  MONGO_URI=""
+  CLOUDINARY_CLOUD_NAME=""
+  CLOUDINARY_API_KEY=""
+  CLOUDINARY_API_SECRET=""
+  USER=""
+  PASS=""
+  SERVER_URL=""
+  MASTER_ADMIN_SECRET=""
+  ```
+
 1. **User Registration and Authentication:**
 
    - **Registration:**
@@ -371,20 +386,5 @@ These are the request and response documentation for each route in your Node.js 
 
 9. **Cron Job for Cleanup:**
    - Sets up a cron job to delete unverified user accounts after a specified timeframe.
-
-10. **.env Configuration:**
-   - Copy this env file and paste your own values
-  ```
-  JWT_SECRET=""
-  PORT=
-  MONGO_URI=""
-  CLOUDINARY_CLOUD_NAME=""
-  CLOUDINARY_API_KEY=""
-  CLOUDINARY_API_SECRET=""
-  USER=""
-  PASS=""
-  SERVER_URL=""
-  MASTER_ADMIN_SECRET=""
-  ```
 
 These functionalities collectively form a comprehensive user authentication and management system with features such as registration, login, profile updates, password resets, and admin operations.
